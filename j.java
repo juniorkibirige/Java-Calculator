@@ -1,8 +1,6 @@
-package com.company;
-
 import java.util.Scanner;
 
-public class Main {
+public class j {
     // ((5 + 4) + 4) * 2
     public static void main(String[] args) {
         int stopper = 9;
@@ -19,8 +17,13 @@ public class Main {
                 Scanner expressionScanner = new Scanner(System.in);
                 String expression = expressionScanner.nextLine();
                 System.out.println(evaluateExpression(expression));
+                expressionScanner.close();
             }
             stopper = stopperScanner.nextInt();
+            if(stopper == 0) {
+                stopperScanner.close();
+
+            }
 
         } while (stopper != 0);
 
